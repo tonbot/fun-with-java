@@ -1,5 +1,6 @@
 package fun.util;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class fun_002 {
@@ -13,6 +14,7 @@ public class fun_002 {
 		 * HashSet
 		 * */		
 		usingArray();
+		usingArrayList();
 	}
 	
 	public static void usingArray() {
@@ -27,7 +29,9 @@ public class fun_002 {
 			i++;
 			System.out.println( i + " . "  + car);
 		}
-		//getting an element of your choice using scanner input
+		 
+		
+		//get any array element of your choice using scanner input
 		System.out.println("From the list of car above select your favorite");
 		int favorite  = scanner.nextInt();
 		//check user input and outputing message
@@ -42,9 +46,44 @@ public class fun_002 {
 			
 	}
 	
-    public void usingArrayList() {
-		
-	}
+	//this is a method for ArraList
+    public static void usingArrayList() {
+    	
+    	ArrayList<String> latestCars = new ArrayList<String>();
+    	//add element into new array object created;
+    	latestCars.add("Maruti Grand Vitara");
+    	latestCars.add("Audi A4");
+    	latestCars.add("Ferrari 296 GTB");
+    	latestCars.add("Citroen C5 Aircross");
+    	
+       //get element 
+     	System.out.println(latestCars.get(0));
+     	System.out.println(latestCars.get(1));
+     	System.out.println(latestCars.get(2));
+     	System.out.println(latestCars.get(3));
+     	
+     	//print array size
+     	System.out.println("The size of the array is " + latestCars.size());
+     	
+     	//remove Element 
+     	latestCars.remove(2);
+     	
+     	//print array size
+     	System.out.println("The size of the array is " + latestCars.size());
+     	
+     	//change element
+     	latestCars.set(0,"Honda");
+     	int i = 0;
+     	//loop through array
+    	for(String car : latestCars) {
+			i++;
+			System.out.println( i + " . "  + car);
+		}
+	
+    	
+ 
+    }
+   
 
     public void usingLinkedList() {
 	
