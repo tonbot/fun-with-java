@@ -1,6 +1,7 @@
 package fun.util;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 public class fun_002 {
@@ -15,6 +16,7 @@ public class fun_002 {
 		 * */		
 		usingArray();
 		usingArrayList();
+		usingLinkedList();
 	}
 	
 	public static void usingArray() {
@@ -85,7 +87,44 @@ public class fun_002 {
     }
    
 
-    public void usingLinkedList() {
+    public static void usingLinkedList() {
+    	LinkedList<String> latestCars = new LinkedList<String>();
+    	//add element into new array object created;
+    	latestCars.add("Maruti Grand Vitara");
+    	latestCars.add("Audi A4");
+    	latestCars.add("Ferrari 296 GTB");
+    	latestCars.add("Citroen C5 Aircross");
+    	
+       //get element 
+     	System.out.println(latestCars.get(0));
+     	System.out.println(latestCars.get(1));
+     	System.out.println(latestCars.get(2));
+     	System.out.println(latestCars.get(3));
+     	
+     	//print array size
+     	System.out.println("The size of the array is " + latestCars.size());
+     	
+     	//remove Element 
+     	latestCars.remove(2);
+     	
+     	//print array size
+     	System.out.println("The size of the array is " + latestCars.size());
+     	
+     	//print the first element of the array
+     	System.out.println(latestCars.getFirst());
+     	//print the last element of the array
+     	System.out.println(latestCars.getLast());
+     	//remove first element
+     	latestCars.removeFirst();
+     	//remove last element
+     	latestCars.removeLast();
+     	
+     	int i = 0;
+     	//loop through array
+    	for(String car : latestCars) {
+			i++;
+			System.out.println( i + " . "  + car);
+		}
 	
     }
 
